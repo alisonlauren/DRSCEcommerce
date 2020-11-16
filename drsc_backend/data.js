@@ -9,6 +9,7 @@ const data = {
             images: '../images/soap1.jpg',
             price: 120,
             rating: 3,
+            countInStock: 0,
             numReviews: 1,
             description: 'made with x, y, z'
         },
@@ -20,6 +21,7 @@ const data = {
             images: '../images/soap1.jpg',
             price: 120,
             rating: 4.5,
+            countInStock: 12,
             numReviews: 1,
             description: 'made with x, y, z'
         },
@@ -31,6 +33,7 @@ const data = {
             images: '../images/soap1.jpg',
             price: 120,
             rating: 4.2,
+            countInStock: 5,
             numReviews: 44,
             description: 'made with x, y, z'
         },
@@ -39,10 +42,11 @@ const data = {
             name: 'berry soap',
             category: 'handmade soap',
             image: './images/soap1.jpg',
-            images: '../images/soap1.jpg',
+            image: '../images/soap1.jpg',
             images: '../images/soap1.jpg',
             price: 120,
             rating: 2.5,
+            countInStock: 3,
             numReviews: 32,
             description: 'made with x, y, z'
         },
@@ -54,6 +58,7 @@ const data = {
             images: '../images/soap1.jpg',
             price: 120,
             rating: 4.2,
+            countInStock: 13,
             numReviews: 55,
             description: 'made with x, y, z'
         },
@@ -65,6 +70,7 @@ const data = {
             images: '../images/soap1.jpg',
             price: 120,
             rating: 5,
+            countInStock: 11,
             numReviews: 2,
             description: 'made with x, y, z'
         },

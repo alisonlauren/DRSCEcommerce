@@ -9,10 +9,9 @@ export default function Product(props) {
                 
                 <img className="medium" src={product.image} alt={product.name} />
                 <div className="card-body">
-                    <a href={`/product/${product.id}`}>
+                    <Link to={`/product/${product._id}`}></Link>
                     <Link to= {`/product/${product._id}`}>{product.name}</Link>
                         
-                    </a>
                     <Rating rating={product.rating} numReviews={product.numReviews} />
             <div className="price">${product.price}</div>
         </div>

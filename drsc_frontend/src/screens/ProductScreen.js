@@ -15,7 +15,7 @@ export default function ProductScreen(props) {
     const dispatch = useDispatch();
     const productId = props.match.params.id;
     const [qty, setQty] = useState(1);
-    const productDetails = useSelector(state => state.productDetails);
+    const productDetails = useSelector((state) => state.productDetails);
     const { loading, error, product } = productDetails;
 
     useEffect(() => {
@@ -23,8 +23,8 @@ export default function ProductScreen(props) {
     }, [dispatch, productId]);
 
     const addToCartHandler = () => {
-        props.history.push(`/cart/${productId}?qty={qty}`);
-    }
+        props.history.push(`/cart/${productId}?qty=${qty}`);
+    };
 
     return (
         <div>
@@ -34,7 +34,6 @@ export default function ProductScreen(props) {
                 <MessageBox variant="danger">{error}</MessageBox>
             ) : (
                         <div>
-                            <Link to="/">Back To Results</Link>
                             <div className="row top">
                                 <div className="col-2">
                                     <img className="large" src={product.images} alt={product.name} />
@@ -47,7 +46,7 @@ export default function ProductScreen(props) {
                                         <li>
                                             <Rating
                                                 rating={product.rating}
-                                                numReviews={product.numReviews} />
+                                                numReviews={product.numReviews}></Rating>
                                         </li>
                                         <li>Price: ${product.price}</li>
                                         <li>
@@ -77,12 +76,17 @@ export default function ProductScreen(props) {
                                                             <div className="row">
                                                                 <div>Qty</div>
                                                                 <div>
-                                                                    <select value={qty} onChange={e => setQty(e.target.value)}>
-                                                                        {
-                                                                            [...Array(product.countInStock).keys()].map((x) => (
-                                                                                <option key={x+1} value={x + 1}>{x + 1}</option>
-                                                                            ))
-                                                                        }
+                                                                    <select
+                                                                        value = {qty}
+                                                                        onChange={(e) => setQty(e.target.value)}
+                                                                    >
+                                                                        {[...Array(product.countInStock).keys()].map(
+                                                                            (x) => (
+                                                                                <option key={x + 1} value={x + 1}>
+                                                                                    {x + 1}
+                                                                                </option>
+                                                                            )
+                                                                        )}
                                                                     </select>
                                                                 </div>
                                                             </div>
