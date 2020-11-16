@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { addToCart } from '../actions/cartActions';
+import { addToCart, removeFromcart } from '../actions/cartActions';
 import { useDispatch, useSelector } from 'react-redux';
 import MessageBox from '../components/MessageBox';
 import { Link } from 'react-router-dom';
@@ -21,11 +21,20 @@ export default function CartScreen(props) {
 
     }, [dispatch, productId, qty])
 
+    const removeFromCartHandler = (id) => {
+        dispatch(removeFromcart(id));
+    }
+    const checkoutHandler = () => {
+        props.history.push('/signin?redirect=shipping')
+    }
+
+
+
     return (
         <div className="row top">
             <div className="col-2">
                 <h1>Shopping Cart</h1>
-                {cartItems.length === 0 ? (<MessageBox>Cart is Empty <Link to="/">Go Shopping</Link></MessageBox>
+                {cartItems.length === 0 ? (<MessageBox>Cart is Empty, <Link to="/">Start Shopping?</Link></MessageBox>
                 ) : (
                         <ul>
                             {
@@ -33,22 +42,33 @@ export default function CartScreen(props) {
                                     <li key={item.product}>
                                         <div className="row">
                                             <div>
-                                                <img src={item.image} alt={item.name} className="medium">
+                                                <img src={item.image} alt={item.name} className="small">
                                                 </img>
                                             </div>
                                             <div className="min-30">
                                                 <Link to={`/product/${item.product}`}>{item.name}</Link>
-                                                </div>
-                                                <div>
-                                                    <select value={item.qty}
-                                                    onChange={(e) => 
-                                                    dispatch(
-                                                        addToCart(item.product),
-                                                        Number(e.target.value)
-                                                    )}>
-                                                        
-                                                    </select>
-                                                </div>
+                                            </div>
+                                            <div>
+                                                <select value={item.qty}
+                                                    onChange={(e) =>
+                                                        dispatch(
+                                                            addToCart(item.product, Number(e.target.value))
+                                                        )}>
+                                                    {[...Array(item.countInStock).keys()].map(
+                                                        (x) => (
+                                                            <option key={x + 1} value={x + 1}>
+                                                                {x + 1}
+                                                            </option>
+                                                        )
+                                                    )}
+
+                                                </select>
+                                            </div>
+                                            <div>${item.price}</div>
+                                            <div>
+                                                <button type="button" onClick={() => removeFromCartHandler(item.product)}
+                                                >Delete</button>
+                                            </div>
                                         </div>
                                     </li>
                                 ))
@@ -57,7 +77,26 @@ export default function CartScreen(props) {
                     )
                 }
             </div>
-
+                    <div className="col-1">
+                        <div className="card card-body">
+                            <ul>
+                                <li>
+                                    <h2>
+                                        Subtotal: ({cartItems.reduce((a, c) => a + c.qty, 0)} items) : $
+                                        {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
+                                    </h2>
+                                </li>
+                                <li>
+                                    <button type="button" 
+                                    onClick={checkoutHandler} 
+                                    className="primary block" 
+                                    disabled={cartItems.length === 0}>
+                                    Proceed To Checkout
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
         </div>
     );
 }
