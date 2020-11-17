@@ -42,7 +42,7 @@ export default function CartScreen(props) {
                                     <li key={item.product}>
                                         <div className="row">
                                             <div>
-                                                <img src={item.image} alt={item.name} className="small">
+                                                <img src={item.images} alt={item.name} className="medium">
                                                 </img>
                                             </div>
                                             <div className="min-30">

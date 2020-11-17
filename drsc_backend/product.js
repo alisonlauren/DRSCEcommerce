@@ -1,25 +1,8 @@
-import bcrypt from 'bcryptjs';
+const productData = {
 
-const data = {
-    users: [
-        {
-            name: 'Basir',
-            email: 'admin@example.com',
-            password: bcrypt.hashSync('1234', 8),
-            isAdmin: true,
-        },
-        {
-            name: 'Sadie',
-            email: 'user@example.com',
-            password: bcrypt.hashSync('1234', 8),
-            isAdmin: false,
-
-        }
-
-    ],
     products: [
         {
-            name: 'berry soap1',
+            name: 'berry soap',
             image: '../images/soap1.jpg',
             brand: 'SoapBrand',
             category: 'handmade soap',
@@ -30,7 +13,7 @@ const data = {
             numReviews: 1,
         },
         {
-            name: 'berry soap2',
+            name: 'berry soap',
             image: '../images/soap1.jpg',
             brand: 'SoapBrand',
             category: 'handmade soap',
@@ -41,7 +24,7 @@ const data = {
             numReviews: 1,
         },
         {
-            name: 'berry soap3',
+            name: 'berry soap',
             image: '../images/soap1.jpg',
             brand: 'SoapBrand',
             category: 'handmade soap',
@@ -55,7 +38,7 @@ const data = {
         },
         {
 
-            name: 'berry soap4',
+            name: 'berry soap',
             image: '../images/soap1.jpg',
             brand: 'SoapBrand',
             category: 'handmade soap',
@@ -66,8 +49,8 @@ const data = {
             numReviews: 6,
         },
         {
-            name: 'berry soap5',
-            image: '../images/soap1.jpg' || './images/soap1.jpg',
+            name: 'berry soap',
+            image: '../images/soap1.jpg',
             brand: 'SoapBrand',
             category: 'handmade soap',
             description: 'made with x, y, z',
@@ -78,7 +61,7 @@ const data = {
         },
         {
 
-            name: 'berry soap6',
+            name: 'berry soap',
             image: '../images/soap1.jpg',
             brand: 'SoapBrand',
             category: 'handmade soap',
@@ -90,6 +73,4 @@ const data = {
         },
     ]
 }
-
-
-export default data;
+export default productData;
