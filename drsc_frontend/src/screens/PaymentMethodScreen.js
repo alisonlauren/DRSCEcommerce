@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import { useState } from 'react-dom'
 import { useDispatch } from 'react-redux'
 import { savePaymentMethod } from '../actions/cartActions';
 
 
-export default function PaymentMethodScreen() {
-    const [paymentMethod, setpaymentMethod] = useState('PayPal')
+export default function PaymentMethodScreen(props) {
+    const [paymentMethod, setPaymentMethod] = useState('PayPal')
 
     const dispatch = useDispatch();
 
