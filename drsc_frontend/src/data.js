@@ -3,7 +3,7 @@
 const data = {
     products: [
         {
-            _id: '1',
+      
             name: 'berry soap',
             category: 'handmade soap',
             image: './images/soap1.jpg',
@@ -14,7 +14,7 @@ const data = {
             description: 'made with x, y, z'
         },
         {
-            _id: '2',
+       
             name: 'berry soap',
             category: 'handmade soap',
             image: './images/soap1.jpg',
@@ -25,7 +25,7 @@ const data = {
             description: 'made with x, y, z'
         },
         {
-            _id: '3',
+    
             name: 'berry soap',
             category: 'handmade soap',
             image: './images/soap1.jpg',
@@ -36,7 +36,7 @@ const data = {
             description: 'made with x, y, z'
         },
         {
-            _id: '4',
+        
             name: 'berry soap',
             category: 'handmade soap',
             image: './images/soap1.jpg',
@@ -48,7 +48,7 @@ const data = {
             description: 'made with x, y, z'
         },
         {
-            _id: '5',
+
             name: 'berry soap',
             category: 'handmade soap',
             image: './images/soap1.jpg',
@@ -59,7 +59,7 @@ const data = {
             description: 'made with x, y, z'
         },
         {
-            _id: '6',
+     
             name: 'berry soap',
             category: 'handmade soap',
             image: './images/soap1.jpg',
