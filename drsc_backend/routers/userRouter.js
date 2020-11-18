@@ -20,7 +20,7 @@ userRouter.post('/signin', expressAsyncHandler(async (req, res) => {
     if(user) {
         if(bcrypt.compareSync(req.body.password, user.password)) {
             res.send({
-                __id: user.__id,
+                _id: user._id,
                 name: user.name,
                 email: user.email,
                 isAdmin: user.isAdmin,
@@ -42,7 +42,7 @@ userRouter.post(
         });
         const createdUser = await user.save();
         res.send({
-            __id: createdUser.__id,
+            _id: createdUser._id,
             name: createdUser.name,
             email: createdUser.email,
             isAdmin: createdUser.isAdmin,
