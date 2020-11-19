@@ -3,7 +3,7 @@ import expressAsyncHandler from 'express-async-handler'
 import bcrypt from 'bcrypt';
 import User from '../models/userModel.js';
 import data from '../data.js'
-import { generateToken } from '../utils.js';
+import { generateToken, isAuth } from '../utils.js';
 
 const userRouter = express.Router();
 
@@ -51,4 +51,37 @@ userRouter.post(
     })
 );
 
-export default userRouter;
+userRouter.get('/:id', expressAsyncHandler(async(req, res) => {
+    const user = await User.findById(req.params.id);
+    if (user) {
+        res.send(user); 
+    } else {
+        res.status(404).send({message: "User Not Found"})
+    }
+}))
+
+
+userRouter.put('/profile', isAuth, expressAsyncHandler(async(req, res) => {
+    const user = await User.findById(req.user._id);
+    if(user) {
+        //the or takes care of if the user puts in an empty string, it will default to
+        //their previously set name, email, etc.
+        user.name = req.body.name || user.name;
+        user.email = req.body.email || user.email;
+        if(req.body.password) {
+            //this of course is encrypted, using bycrpt
+            user.password = bcrypt.hashSync(req.body.password, 8)
+        }
+        const updatedUser =  await user.save();
+        res.send({
+            _id: updatedUser._id,
+            name: updatedUser.name,
+            email: updatedUser.email,
+            isAdmin: updatedUser.isAdmin,
+            token: generateToken(updatedUser)
+            })
+        }
+    })
+);
+
+export default userRouter; 
