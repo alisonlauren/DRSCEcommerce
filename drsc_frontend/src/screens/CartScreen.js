@@ -42,7 +42,7 @@ export default function CartScreen(props) {
                                     <li key={item.product}>
                                         <div className="row">
                                             <div>
-                                                <img src={item.images} alt={item.name} className="medium">
+                                                <img src={item.image} alt={item.name} className="medium">
                                                 </img>
                                             </div>
                                             <div className="min-30">
@@ -64,7 +64,7 @@ export default function CartScreen(props) {
 
                                                 </select>
                                             </div>
-                                            <div>${item.price}</div>
+                                            <div> 1 x ${item.price}</div>
                                             <div>
                                                 <button type="button" onClick={() => removeFromCartHandler(item.product)}
                                                 >Delete</button>
@@ -76,15 +76,21 @@ export default function CartScreen(props) {
                         </ul>
                     )
                 }
+                
             </div>
                     <div className="col-1">
                         <div className="card card-body">
                             <ul>
+                                
                                 <li>
-                                    <h2>
-                                        Subtotal: ({cartItems.reduce((a, c) => a + c.qty, 0)} items) : $
-                                        {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
+                                    <h2> 
+                                        {/* use reduce method, which returns a single value from 
+                                        an array, the arguements are the accumulator and current item, 
+                                        default value for accumulator is 0 */}
+                                        Subtotal: ({cartItems.reduce((a, c) => a + c.qty, 0)} items) : $ 
+                                        {cartItems.reduce((a, c) => a + c.price * c.qty, 0)} 
                                     </h2>
+                                
                                 </li>
                                 <li>
                                     <button type="button" 

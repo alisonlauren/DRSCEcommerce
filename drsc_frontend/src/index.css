@@ -1,3 +1,5 @@
+
+
 html {
   font-size: 62.5%; /* 16px x 62.5 = 10px = 1rem */
   box-sizing: border-box;
@@ -9,6 +11,7 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 #root {
   height: 100%;
@@ -22,20 +25,22 @@ body {
     'main'
     'footer';
   grid-template-columns: 1fr;
-  grid-template-rows: 5rem 1fr 5rem;
+  grid-template-rows: 8rem 1fr 5rem;
   height: 100%;
 }
 header {
   grid-area: header;
-  background-color: #203040;
+  background-color: rgb(53, 160, 192);
+
 }
 main {
   grid-area: main;
-  padding: 1rem;
+  padding: 5rem;
+  background-color: rgb(230, 224, 224);
 }
 footer {
   grid-area: footer;
-  background-color: #203040;
+  background-color: rgb(66, 58, 58);
   color: #ffffff;
 }
 /* Common */
@@ -55,7 +60,7 @@ a:hover {
   color: #ff8000;
 }
 ul {
-  padding: 0;
+  padding: 30px;
   margin: 0;
   list-style-type: none;
 }
@@ -85,7 +90,7 @@ button:hover {
   border: 0.1rem #404040 solid;
 }
 button.primary {
-  background-color: #f0c040;
+  background-color: rgb(129, 158, 157);
 }
 button.block {
   width: 100%;
@@ -104,8 +109,8 @@ a.brand {
   font-weight: bold;
 }
 .badge {
-  background-color: #f02020;
-  color: #ffffff;
+  background-color: white;
+  color: black;
   border-radius: 50%;
   padding: 0.2rem 0.7rem;
   font-size: 1.4rem;
@@ -136,17 +141,23 @@ a.brand {
 /* Image */
 img {
   border-radius: 0.5rem;
+
 }
 img.small {
   max-width: 5rem;
   width: 100%;
+  
+ 
 }
 img.medium {
   max-width: 29rem;
   width: 100%;
+
+  
 }
 img.large {
   width: 100%;
+  border-style: solid;
 }
 
 /* Card */
@@ -242,8 +253,8 @@ img.large {
   font-weight: bold;
 }
 .checkout-steps > div.active {
-  border-top-color: #f08000;
-  color: #f08000;
+  border-top-color: black;
+  color: black;
 }
 /* Table */
 .table {

@@ -20,7 +20,7 @@ const data = {
     products: [
         {
             name: 'berry soap1',
-            image: '../images/soap1.jpg',
+            image: '../images/soap2.jpg',
             brand: 'SoapBrand',
             category: 'handmade soap',
             description: 'made with x, y, z',
@@ -31,7 +31,7 @@ const data = {
         },
         {
             name: 'berry soap2',
-            image: '../images/soap1.jpg',
+            image: '../images/soap2.jpg',
             brand: 'SoapBrand',
             category: 'handmade soap',
             description: 'made with x, y, z',
@@ -42,7 +42,7 @@ const data = {
         },
         {
             name: 'berry soap3',
-            image: '../images/soap1.jpg',
+            image: '../images/soap3.jpg',
             brand: 'SoapBrand',
             category: 'handmade soap',
             description: 'made with x, y, z',
@@ -56,7 +56,7 @@ const data = {
         {
 
             name: 'berry soap4',
-            image: '../images/soap1.jpg',
+            image: '../images/soap4.jpg',
             brand: 'SoapBrand',
             category: 'handmade soap',
             description: 'made with x, y, z',
@@ -67,7 +67,7 @@ const data = {
         },
         {
             name: 'berry soap5',
-            image: '../images/soap1.jpg' || './images/soap1.jpg',
+            image: '../images/soap5.jpg',
             brand: 'SoapBrand',
             category: 'handmade soap',
             description: 'made with x, y, z',
@@ -79,7 +79,7 @@ const data = {
         {
 
             name: 'berry soap6',
-            image: '../images/soap1.jpg',
+            image: '../images/soap6.jpg',
             brand: 'SoapBrand',
             category: 'handmade soap',
             description: 'made with x, y, z',

@@ -35,6 +35,7 @@ export default function ProductScreen(props) {
             ) : (
                         <div>
                             <div className="row top">
+                                
                                 <div className="col-2">
                                     <img className="large" src={product.image} alt={product.name} />
                                 </div>
@@ -48,9 +49,9 @@ export default function ProductScreen(props) {
                                                 rating={product.rating}
                                                 numReviews={product.numReviews}></Rating>
                                         </li>
-                                        <li>Price: ${product.price}</li>
+                                        <li><strong>Price: ${product.price}</strong></li>
                                         <li>
-                                            Description: <p>{product.description}</p>
+                                            <strong>Description:</strong> <p>{product.description}</p>
                                         </li>
                                     </ul>
                                 </div>
@@ -59,12 +60,12 @@ export default function ProductScreen(props) {
                                         <ul>
                                             <li>
                                                 <div className="row">
-                                                    <div>Status</div>
+                                                    <div><strong>Status</strong></div>
                                                     <div>
                                                         {product.countInStock > 0 ? (
                                                             <span className="success">In Stock</span>
                                                         ) : (
-                                                                <span className="error">Unavailable</span>
+                                                                <span className="danger">Unavailable</span>
                                                             )}
                                                     </div>
                                                 </div>
@@ -74,7 +75,7 @@ export default function ProductScreen(props) {
                                                     <>
                                                         <li>
                                                             <div className="row">
-                                                                <div>Qty</div>
+                                                                <div><strong>Quantity</strong></div>
                                                                 <div>
                                                                     <select
                                                                         value = {qty}
@@ -94,6 +95,7 @@ export default function ProductScreen(props) {
                                                         <li>
                                                             <button onClick={addToCartHandler} className="primary block">Add To Cart</button>
                                                         </li>
+                                                        
                                                     </>
                                                 )}
                                         </ul>

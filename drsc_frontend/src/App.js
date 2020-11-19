@@ -35,7 +35,7 @@ function App() {
     <div className="grid-container">
       <header className="row">
         <div>
-          <Link to="/" className="brand">Dirty RedHead Soap Co.</Link>
+          <Link to="/" className="brand">Soap & Co.</Link>
         </div>
         <div>
           <Link to="/cart">Cart{cartItems.length > 0 && (
