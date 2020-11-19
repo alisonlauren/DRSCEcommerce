@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --watch drsc_backend --exec node --experimental-modules drsc_backend/server.js",
-    "postinstall": "cd client && npm install && npm run build"
+    "postinstall": "cd drsc_frontend && npm install && npm run build"
   },
   "repository": {
     "type": "git",
