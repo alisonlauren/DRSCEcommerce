@@ -20,9 +20,10 @@
 <img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/express-original-wordmark.svg" alt="Express.js" height="25" />  
 <img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="25" />  
 <img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg" alt="Node.js" height="25" />  
+ React, CSS3, HTML5, Javascript, MongoDB, Express.js, Git, Node.js
 </div>  
 <br/>
- React, CSS3, HTML5, Javascript, MongoDB, Express.js, Git, Node.js
+
 
 Project Contributors:
 * Alison Manning [github](https://github.com/alisonlauren) [linkedIn](https://www.linkedin.com/in/alison-manning-9a25391b1/)
