@@ -40,5 +40,13 @@ export const isAuth = (req, res, next) => {
         res.status(401).send({message: "No Token"})
 
     }
- 
+}
+
+//authenticate only admin user
+export const isAdmin = (req, res, next) => {
+    if(req.user && req.user.isAdmin) {
+        next();
+    } else {
+        resizeTo.status(401).send({message: 'Invalid Admin Token' });
+    }
 }
