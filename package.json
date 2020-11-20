@@ -8,7 +8,6 @@
     "start": "node --experimental-modules drsc_backend/server.js",
     "dev": "nodemon --watch drsc_backend --exec node --experimental-modules drsc_backend/server.js",
     "postinstall": "cd drsc_frontend && npm install && npm run build"
-    
   },
   "repository": {
     "type": "git",

@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import userRouter from './routers/userRouter.js';
 import productRouter from './routers/productRouter.js'; 
 import orderRouter from './routers/orderRouter.js';
+import path from 'path';
 
 
 dotenv.config(); 
@@ -36,7 +37,7 @@ app.get('/api/config/paypal', (req, res) => {
 
 
 
-app.use((err, req, res, next) => {
+app.use((err, req, res) => {
     res.status(500).send({message: err.message })
 
 })
