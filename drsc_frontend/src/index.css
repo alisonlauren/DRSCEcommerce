@@ -251,6 +251,7 @@ img.large {
   flex: 1;
   padding: 1rem;
   font-weight: bold;
+  min-width: 100px;
 }
 .checkout-steps > div.active {
   border-top-color: black;
