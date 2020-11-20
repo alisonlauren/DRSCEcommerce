@@ -36,48 +36,11 @@ Project Contributors:
 
 ## **Features and Functionality **
 
-## **Lessons Learned**
-1. The power of Sequelize
-* Specifically when we had a many to many relationship for our challenges to users table.
-  * Once we got the migrations and models set up properly (specifically using the belongsToMany), Sequelize has a multitude of built in methods that we were able to use to quickly accomplish the tasks necessary.
-```js
-    db.User.findOne({
-        where: {
-            id: req.session.user.id
-        }
-    })
-    .then(user=>{
-        user.getChallenges({
-        where: {
-            is_completed: false,
-        }
-    })
-        .then(challenges => {
-            if(challenges.length === 0){
-                res.status(404).json({error: `No ${workoutType.toLowerCase()} challenges found`})
-            }else{
-                res.status(200).json(challenges);
-            }
-        })
-        .catch(e=>{
-            console.log(e);
-        })
-    })
-    .catch(e=>{
-        console.log(e);
-    })
-```
-* Above demonstrates one of these powerful methods that sequelize allows us to access. Once we find the right user by referecing the session user id, we can then call the getChallenges sequelize on the user result.
-  * Below is a list of other methods we could also access using the same logic from above:
-    * user.getChallenges()
-    * user.countChallenges()
-    * user.hasChallenge()
-    * user.hasChallenges()
-    * user.setChallenges()
-    * user.addChallenge()
-    * user.addChallenges()
-    * user.removeChallenge()
-    * user.removeChallenges()
-    * user.createChallenge()
+1. User Sign-In. Users have a password protected profile to manage order history, payment fulfilled, shipping status, browse products and add to cart. Additionally, the app will save their most recent address. Their profile password is protected via bcrypt.
+2. PayPal accessibility. While I am currently running a sandbox version of the payment, I will run a live one once the site is ready to go live as well. Thanks to PayPal’s functionality, users can also pay without a PayPal account via credit card or debit card.
+3. Change User Info. Each user can change their name or password at any time. They will need to re-log in and their changes will be adjusted.
+4. Tax and Shipping. I’ve built algorithms that will compute a subtotal based on a few conditions. Right now, tax Is set to 15% and any order total less than $100 will have a $10 shipping cost.
 
-<!-- ## **Credit** and **Licenses** -->
+
+Check out the website live here, !
+
