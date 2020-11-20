@@ -36,7 +36,7 @@ Project Contributors:
 
 ## **Features and Functionality **
 
-* 1. User Sign-In. Users have a password protected profile to manage order history, payment fulfilled, shipping status, browse products and add to cart. Additionally, the app will save their most recent address. Their profile password is protected via bcrypt.
+1. User Sign-In. Users have a password protected profile to manage order history, payment fulfilled, shipping status, browse products and add to cart. Additionally, the app will save their most recent address. Their profile password is protected via bcrypt.
 2. PayPal accessibility. While I am currently running a sandbox version of the payment, I will run a live one once the site is ready to go live as well. Thanks to PayPal’s functionality, users can also pay without a PayPal account via credit card or debit card.
 3. Change User Info. Each user can change their name or password at any time. They will need to re-log in and their changes will be adjusted.
 4. Tax and Shipping. I’ve built algorithms that will compute a subtotal based on a few conditions. Right now, tax Is set to 15% and any order total less than $100 will have a $10 shipping cost.
