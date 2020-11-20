@@ -34,9 +34,7 @@ app.get('/api/config/paypal', (req, res) => {
     res.send(process.env.PAYPAL_CLIENT_ID || 'sb')
 })
 
-app.get('/', (req, res) => {
-    res.send('Server is ready'); 
-})
+
 
 app.use((err, req, res, next) => {
     res.status(500).send({message: err.message })
@@ -45,6 +43,10 @@ app.use((err, req, res, next) => {
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('../drsc_frontend/build'));
+} else {
+    app.get('/', (req, res) => {
+        res.send('Server is ready'); 
+    })
 }
 
 const port = process.env.PORT || 5000;
