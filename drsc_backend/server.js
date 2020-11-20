@@ -43,13 +43,9 @@ app.use((err, req, res, next) => {
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('../drsc_frontend/build'));
-// } else {
-//     app.get('/', (req, res) => {
-//         res.send('Server is ready'); 
-//     })
-// }
+} 
 
-app.get('/', function (req, res) {
+app.get('*', function (req, res) {
     res.sendFile(path.join(__dirname, '../drsc_frontend/build', 'index.html'));});
 
 const port = process.env.PORT || 5000;
