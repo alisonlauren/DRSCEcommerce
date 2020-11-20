@@ -37,10 +37,7 @@ app.get('/api/config/paypal', (req, res) => {
 
 
 
-app.use((err, req, res) => {
-    res.status(500).send({message: err.message })
 
-})
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('../drsc_frontend/build'));
