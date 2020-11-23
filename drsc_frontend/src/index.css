@@ -274,3 +274,9 @@ img.large {
 .table button {
   margin: 0 0.2rem;
 }
+/* landing page */
+.backwood {
+  margin-top: 0px;
+  width: 100vw;
+  height: 500px;
+}

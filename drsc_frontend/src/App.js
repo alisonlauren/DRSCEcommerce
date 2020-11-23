@@ -14,6 +14,7 @@ import OrderScreen from './screens/OrderScreen';
 import OrderHistoryScreen from './screens/OrderHistoryScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import PrivateRoute from './components/PrivateRoute';
+import LandingPageScreen from './screens/LandingPageScreen';
 
 function App() {
 
@@ -96,6 +97,7 @@ function App() {
         <Route path="/orderhistory" component={OrderHistoryScreen}></Route>
         <PrivateRoute path="/profile" component={ProfileScreen}></PrivateRoute>
         <Route exact path="/" component={HomeScreen}></Route>
+        <Route path="/landingpage" component={LandingPageScreen}></Route>
         
       </main>
       <footer className="row center">All rights reserved</footer>

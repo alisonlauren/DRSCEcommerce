@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import store from './store';
+import 'semantic-ui-css/semantic.min.css'
 
 
 ReactDOM.render(
