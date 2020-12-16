@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 
 html {
   font-size: 62.5%; /* 16px x 62.5 = 10px = 1rem */
@@ -105,8 +105,11 @@ header a {
 }
 a.brand {
   color: #ffffff;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: bold;
+  font-family: 'Sacramento', cursive;
+
+
 }
 .badge {
   background-color: white;
@@ -115,6 +118,8 @@ a.brand {
   padding: 0.2rem 0.7rem;
   font-size: 1.4rem;
   margin-left: 0.2rem;
+  
+
 }
 .row {
   display: flex;
@@ -240,6 +245,8 @@ img.large {
   margin: 0;
   margin-top: 0.4rem;
   border-radius: 0.5rem;
+  font-family: 'Sacramento', cursive;
+
 }
 .dropdown:hover .dropdown-content {
   display: block;
@@ -275,9 +282,12 @@ img.large {
   margin: 0 0.2rem;
 }
 
-
-/* Logo */
-.logo {
-  display: flex;
-  justify-content: center;
+.responsive {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  
 }
+
+
+
