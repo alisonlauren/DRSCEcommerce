@@ -36,7 +36,7 @@ header {
 main {
   grid-area: main;
   padding: 5rem;
-  background-color: rgb(230, 224, 224);
+  background-color: rgb(80, 71, 71);
 }
 footer {
   grid-area: footer;
