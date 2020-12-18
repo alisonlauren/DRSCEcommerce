@@ -32,6 +32,8 @@ function App() {
   }
 
   return (
+    <>
+    <div class="bg_image"></div>
     <BrowserRouter>
     <div className="grid-container">
       <header className="row">
@@ -103,6 +105,7 @@ function App() {
       <footer className="row center">All rights reserved</footer>
       </div>
       </BrowserRouter>
+      </>
   );
 }
 
