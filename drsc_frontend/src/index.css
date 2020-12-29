@@ -173,6 +173,7 @@ img.large {
   border-radius: 0.5rem;
   margin: 1rem;
   min-height: 300px;
+  max-height: 350px;
 }
 .card-body {
   padding: 1rem;
